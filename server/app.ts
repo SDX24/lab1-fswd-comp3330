@@ -23,3 +23,15 @@ app.get('/health', (c) => c.json({ status: 'healthy' }))
 
 // Mount API routes
 app.route('/api/expenses', expensesRoute)
+
+// server/app.ts
+import { authRoute } from './auth/kinde'
+
+app.route('/api/auth', authRoute)
+// app.route('/api/expenses', expensesRoute) // existing
+
+// server/app.ts
+import { secureRoute } from './routes/secure'
+app.route('/api/secure', secureRoute)
+
+export default app
