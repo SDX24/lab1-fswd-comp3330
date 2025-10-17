@@ -34,4 +34,8 @@ app.route('/api/auth', authRoute)
 import { secureRoute } from './routes/secure'
 app.route('/api/secure', secureRoute)
 
+import { uploadRoute } from './routes/upload'
+app.route('/api/upload', uploadRoute)
+
+
 export default app
